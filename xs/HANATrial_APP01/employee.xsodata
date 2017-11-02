@@ -1,0 +1,3 @@
+service{
+    "AMOL"."amol.model.HANATrial_APP01::EmployeeTable" as "Employee";
+}

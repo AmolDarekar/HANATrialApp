@@ -1,0 +1,14 @@
+// 1.Schema Name
+table.schemaName = "AMOL";
+// 2.Table Type
+table.tableType = COLUMNSTORE;
+// 5.Table columns
+table.columns = [
+                    {name = "EMP_ID";   sqlType = INTEGER; nullable = false;},
+                    {name = "EMP_NAME"; sqlType = NVARCHAR; nullable = false; length = 10;},
+                    {name = "EMP_DEPT"; sqlType = NVARCHAR; nullable = true; length = 10; defaultValue = "SAP-ABAP";},
+                    {name = "EMP_SAL";  sqlType = DECIMAL; nullable = false; precision = 12; scale = 3;}
+                ];
+
+// Table primary keys
+table.primaryKey.pkcolumns = ["EMP_ID"];
