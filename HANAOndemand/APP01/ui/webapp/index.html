@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>App01</title>
+        <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
+		<script id="sap-ui-bootstrap"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"com.amol.hanatrialSample": ""}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script>
+		jQuery.sap.require('com.amol.hanatrialSample.lib.FBSDKload');
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "com.amol.hanatrialSample"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>
