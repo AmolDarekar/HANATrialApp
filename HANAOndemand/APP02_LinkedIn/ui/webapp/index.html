@@ -5,8 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta charset="UTF-8">
 
-		<title>Facebook Login</title>
-        <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js"></script>
+		<title>LinkedIn Login</title>
 		<script id="sap-ui-bootstrap"
 			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
 			data-sap-ui-libs="sap.m"
@@ -17,7 +16,6 @@
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script>
-		jQuery.sap.require('com.amol.hanatrialSample.lib.FBSDKload');
 			sap.ui.getCore().attachInit(function() {
 				new sap.m.Shell({
 					app: new sap.ui.core.ComponentContainer({
@@ -27,6 +25,11 @@
 				}).placeAt("content");
 			});
 		</script>
+		<script type="text/javascript" src="//platform.linkedin.com/in.js">
+                api_key:81wvx6o33wu1hp
+                authorize: true
+        </script>
+		
 	</head>
 
 	<body class="sapUiBody" id="content">

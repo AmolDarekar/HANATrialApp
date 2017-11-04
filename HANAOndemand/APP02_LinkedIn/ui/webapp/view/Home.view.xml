@@ -1,0 +1,41 @@
+<mvc:View controllerName="com.amol.hanatrialSample.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+			<Page id="idPageHome">
+			    <customHeader>
+        			<Bar>
+        				<contentLeft>
+        				</contentLeft>
+        				<contentMiddle>
+        				    
+        				</contentMiddle>
+        				<contentRight>
+                            
+                            <Button icon="sap-icon://account" press="onFBSignInPress"></Button>
+        				</contentRight>
+        			</Bar>
+        		</customHeader>
+				<content>
+				    <FlexBox alignItems="Start" justifyContent="Center">
+				        <VBox>
+    				        <Image id="idimgPic"></Image>
+    				        <Text id="idtextName"></Text>
+    				        <Label id="idlblInd"/>
+				        </VBox>
+				    </FlexBox>
+				    <List
+                    		items="{POSITIONModel>/items}"
+                    		headerText="Positions">
+                            <CustomListItem>
+                    			<HBox>
+                    				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom" >
+                                        <Text text="{POSITIONModel>company/name}" ></Text>
+                                        <Label text="{POSITIONModel>title}"></Label>
+                                        <Label text="{POSITIONModel>summary}"></Label>
+                                        <Label text="{POSITIONModel>location/name}" ></Label>
+                    				</VBox>
+                    			</HBox>
+                    		</CustomListItem>
+                    	</List>
+				</content>
+			</Page>
+</mvc:View>
